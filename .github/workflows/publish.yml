@@ -1,0 +1,34 @@
+name: Verifica e pubblica Be One Team Opportunity
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  deployments: write
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Recupera i file
+        uses: actions/checkout@v4
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica struttura e referenti
+        run: node scripts/validate.cjs
+      - name: Pubblica nello stesso progetto Cloudflare Pages
+        if: ${{ env.CF_TOKEN != '' && env.CF_ACCOUNT != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=beoneteamopportunity --branch=main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Segnala credenziali mancanti senza bloccare i controlli
+        if: ${{ env.CF_TOKEN == '' || env.CF_ACCOUNT == '' }}
+        run: echo 'Pubblicazione sospesa. Impostare CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID nei Secrets di GitHub Actions.'
