@@ -1,35 +1,44 @@
-# Be One Team Opportunity — pubblicazione automatica
+# BE ONE TEAM Opportunity
 
-Progetto **indipendente da Supporto 3.0**.
+Landing page commerciale del team. Repository separato da `supporto-3-0`.
 
-## Hosting
+## URL
 
-Cloudflare Pages, progetto esistente: **beoneteamopportunity**. Indirizzo: https://beoneteamopportunity.pages.dev/
+- Sito Cloudflare Pages esistente: https://beoneteamopportunity.pages.dev/
+- Versione personale Luca: https://beoneteamopportunity.pages.dev/luca
+- I percorsi diventano disponibili dopo un deployment Cloudflare riuscito.
 
-- `/` — Diegos Botti, con video personale.
-- `/luca` — Luca Cirlini, numero +39 349 476 2908, senza la biografia o il video di Diegos.
-- Tutti i dati dei referenti si trovano in `site/members.js`.
-- Nessun modulo: WhatsApp e chiamata diretti.
+## Struttura
 
-## Pubblicazione automatica (mantenere l'indirizzo attuale)
+- `site/index.html`: homepage Diegos.
+- `site/luca.html`: versione Luca Cirlini.
+- `site/members.js`: numeri, nomi e ruoli dei referenti.
+- `site/app.js`: personalizzazione e link WhatsApp/telefono.
+- `site/assets/`: immagini.
+- `scripts/validate.cjs`: controlli.
+- `.github/workflows/publish.yml`: test e distribuzione Cloudflare su ogni push a main.
 
-Questo sito è già ospitato come progetto **Direct Upload**. Cloudflare non permette la conversione in Git integration nello stesso progetto. Si usa quindi **GitHub Actions + Wrangler** per pubblicare in automatico sul progetto esistente, senza cancellarlo.
+## Stato della pubblicazione
 
-1. Creare un repository GitHub nuovo e separato, per esempio `diegosbotti-hub/be-one-team-opportunity`, e caricarvi **tutto il contenuto di questa directory**.
-2. Su Cloudflare creare un token con permesso **Account → Cloudflare Pages → Edit** limitato all'account pertinente, se possibile.
-3. Impostare in GitHub → repository → Settings → Secrets and variables → Actions i segreti:
-   - `CLOUDFLARE_API_TOKEN`: token (non salvarlo nel codice né inviarlo in chat).
-   - `CLOUDFLARE_ACCOUNT_ID`: ID dell'account Cloudflare.
-4. Dal successivo push su `main`, GitHub Actions verifica i riferimenti e pubblica `site/` nel progetto **beoneteamopportunity**. Se non sono presenti i segreti, la verifica funziona ma la pubblicazione è sospesa.
+Il repository GitHub e il workflow sono configurati. Per autorizzare il deployment sul progetto Cloudflare Pages Direct Upload già esistente è necessario **un solo segreto GitHub Actions**, `CLOUDFLARE_API_TOKEN`, con permessi Cloudflare Pages Edit sull'account che ospita `beoneteamopportunity`.
 
-Non caricare questo archivio nella directory di Supporto 3.0. Prima di distribuire nuovi contatti verificare i dati e il consenso alla pubblicazione.
+Creare il token in Cloudflare → My Profile → API Tokens (token ristretto all'account e al permesso Cloudflare Pages Edit). Inserirlo nel repository GitHub → Settings → Secrets and variables → Actions → New repository secret, con nome `CLOUDFLARE_API_TOKEN`. Non inserire mai il token nei file del repository, nei messaggi o in uno screenshot.
 
-## Controlli
+L'ID account Cloudflare è già configurato nel workflow. Quando il segreto sarà presente, il successivo push su `main` distribuirà `site/` con Wrangler nel progetto `beoneteamopportunity`, mantenendo lo stesso indirizzo.
 
-`node scripts/validate.cjs`
+**Attenzione:** un controllo GitHub Actions riuscito non equivale alla pubblicazione Cloudflare se manca il token. Verificare sempre il dominio e i contatti al termine.
 
-Fonti: https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/
+## Controlli locali
+
+```bash
+node scripts/validate.cjs
+```
 
 ## Backup
 
-Cartella Google Drive dedicata: https://drive.google.com/drive/folders/1mz0pE7tSjG0xMiJJRVw_Km50gf2CaWMn
+https://drive.google.com/drive/folders/1mz0pE7tSjG0xMiJJRVw_Km50gf2CaWMn
+
+## Sviluppo
+
+- Modificare soltanto questo repository per Be One Team; non toccare `supporto-3-0`.
+- Verificare contatti, approvazioni e materiali prima della pubblicazione.
