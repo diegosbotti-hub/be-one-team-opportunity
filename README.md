@@ -6,6 +6,7 @@ Web app commerciale del team: **stesso sistema di pubblicazione di Supporto 3.0 
 
 - Diegos: https://diegosbotti-hub.github.io/be-one-team-opportunity/
 - Luca Cirlini: https://diegosbotti-hub.github.io/be-one-team-opportunity/luca/
+- Dott.ssa Sara Dacci: https://diegosbotti-hub.github.io/be-one-team-opportunity/sara/
 
 Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti centralmente nel medesimo sito.
 
@@ -13,6 +14,7 @@ Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti c
 
 - `site/index.html`: homepage Diegos (biografia e video solo per lui)
 - `site/luca/index.html`: pagina Luca (nome e contatti Luca, senza video e biografia di Diegos)
+- `site/sara/index.html`: pagina Sara Dacci (nome e contatti Sara, senza video e biografia di Diegos)
 - `site/members.js`: elenco referenti, numeri e ruoli
 - `site/app.js`: gestione degli indirizzi e dei collegamenti WhatsApp/telefono
 - `site/assets/`: materiali grafici
