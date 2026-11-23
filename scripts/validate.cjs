@@ -19,6 +19,10 @@ assert(members.includes("slug: 'luca'"), 'Slug Luca mancante');
 assert(app.includes('memberByPath'), 'La selezione per percorso non e presente');
 assert(app.includes("path === 'be-one-team-opportunity'"), 'Homepage GitHub Pages non riconosciuta');
 assert(lucaFolder.includes('Luca Cirlini'), 'Pagina /luca/ assente');
+assert(lucaFolder.includes('wa.me/393494762908'), 'WhatsApp /luca/ errato');
+assert(lucaFolder.includes('tel:+393494762908'), 'Telefono /luca/ errato');
+assert(lucaFolder.includes('src="../app.js"'), 'Percorso JS di /luca/ errato');
+assert(lucaFolder.includes('href="../styles.css"'), 'Percorso CSS di /luca/ errato');
 assert(!lucaFolder.includes('17 anni di esperienza'), 'Biografia Diegos presente in /luca/');
 assert(!lucaFolder.includes('fyN9wLT_xPg'), 'Video Diegos presente in /luca/');
 for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
