@@ -6,6 +6,7 @@ Web app commerciale del team: **stesso sistema di pubblicazione di Supporto 3.0 
 
 - Diegos: https://diegosbotti-hub.github.io/be-one-team-opportunity/
 - Luca Cirlini: https://diegosbotti-hub.github.io/be-one-team-opportunity/luca/
+- Moira Laudato: https://diegosbotti-hub.github.io/be-one-team-opportunity/moira/
 - Dott.ssa Sara Dacci: https://diegosbotti-hub.github.io/be-one-team-opportunity/sara/
 
 Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti centralmente nel medesimo sito.
@@ -14,6 +15,7 @@ Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti c
 
 - `site/index.html`: homepage Diegos (biografia e video solo per lui)
 - `site/luca/index.html`: pagina Luca (nome e contatti Luca, senza video e biografia di Diegos)
+- `site/moira/index.html`: pagina Moira (nome e contatti personali)
 - `site/sara/index.html`: pagina Sara Dacci (nome e contatti Sara, senza video e biografia di Diegos)
 - `site/members.js`: elenco referenti, numeri e ruoli
 - `site/app.js`: gestione degli indirizzi e dei collegamenti WhatsApp/telefono
@@ -26,6 +28,10 @@ Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti c
 Ogni modifica al ramo `main` esegue prima i controlli automatici, poi aggiorna lo stesso sito GitHub Pages. Non servono token Cloudflare o caricamenti ZIP.
 
 Per un nuovo membro, aggiungere i dati confermati in `members.js` e creare una cartella `site/<slug>/index.html` con i riferimenti relativi corretti. Verificare sempre identità, recapito, WhatsApp, testi visibili e la risoluzione degli asset.
+
+## Ultimi controlli layout
+
+- CSS 5.11: spazi verticali tra le sezioni compattati e freccia decorativa della prima scheda nascosta su smartphone (fino a 760 px), per non coprire il testo.
 
 ## Backup
 
