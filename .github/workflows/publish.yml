@@ -34,8 +34,6 @@ jobs:
 
       - name: Inizializza GitHub Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Prepara i file del sito
         uses: actions/upload-pages-artifact@v4
