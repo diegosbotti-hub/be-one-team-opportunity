@@ -13,6 +13,13 @@ window.BE_ONE_MEMBERS = Object.freeze({
     phone: '+393494762908',
     display: '349 476 2908'
   }),
+  'moira-laudato': Object.freeze({
+    name: 'Moira Laudato',
+    slug: 'moira',
+    role: 'Be One Team',
+    phone: '+393408975074',
+    display: '340 897 5074'
+  }),
   'sara-dacci': Object.freeze({
     name: 'Dott.ssa Sara Dacci',
     slug: 'sara',
