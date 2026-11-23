@@ -208,3 +208,53 @@
  .organization__stats>div{padding:15px 18px}
  .organization__bottom{margin-top:21px}
 }
+
+
+/* V5.7 — Uffici nel riquadro statistiche e contatti personali in primo piano */
+.organization__stats .organization__stat-offices{padding-bottom:23px}
+.organization__stat-offices>strong{display:block;font-size:clamp(27px,2.5vw,33px)!important;line-height:1.1;letter-spacing:-.03em;white-space:normal}
+.organization__stat-offices>strong small{font-size:.70em;letter-spacing:.07em;color:#28734c}
+.organization__stat-offices dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 12px;margin:18px 0 0}
+.organization__stat-offices dl>div{min-width:0}
+.organization__stat-offices dt{font-size:11px;font-weight:830;color:#1e6042;letter-spacing:.075em;line-height:1.3}
+.organization__stat-offices dd{font-size:12px;color:#627469;line-height:1.37;margin:4px 0 0;overflow-wrap:break-word}
+.organization__bottom{display:block;grid-template-columns:none;margin-top:26px;padding-top:24px;border-top:1px solid #dbe5db}
+.organization__about{width:100%;max-width:none}
+.organization__profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(235px,.58fr);gap:24px;align-items:center;min-width:0}
+.organization__profile-info{min-width:0}
+.organization__identity{display:flex;flex-wrap:wrap;align-items:center;column-gap:clamp(22px,3.5vw,60px);row-gap:7px}
+.organization__about .organization__identity h3{font-size:clamp(32px,3.2vw,45px);line-height:1.14;letter-spacing:-.04em;margin:0;color:#184e36}
+.organization__phone-large{display:inline-flex;align-items:center;white-space:nowrap;font-size:clamp(25px,2.8vw,35px);font-weight:850;letter-spacing:-.035em;line-height:1.2;color:#137d48;text-decoration:none;border-bottom:2px solid #b9dcc1;padding-bottom:3px}
+.organization__phone-large:hover{color:#0a5836;border-bottom-color:#168c53}
+.organization__member-role[hidden]{display:none!important}
+.organization__profile-info>p{font-size:14px;line-height:1.55;max-width:680px;margin-top:11px}
+.organization__member-intro{margin-top:10px!important;max-width:680px!important}
+.organization__member-actions{margin-top:0;display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:10px}
+.organization__member-actions>a{padding:13px 16px;min-width:145px;flex:1;max-width:210px}
+.organization__leader .video-link{border-top:0;border-left:1px solid #dce6d9;padding:12px 0 12px 23px;margin-top:0;max-width:none}
+@media(max-width:1000px){
+ .organization__stats .organization__stat-offices{grid-column:1/-1;border-right:0;border-top:1px solid #e1e9e1;padding:19px 22px}
+ .organization__stat-offices dl{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+ .organization__profile{grid-template-columns:minmax(0,1fr) minmax(225px,.7fr)}
+ .organization__member-actions>a{max-width:none}
+}
+@media(max-width:760px){
+ .organization__stats .organization__stat-offices{padding:18px 20px}
+ .organization__stat-offices dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 16px}
+ .organization__bottom{margin-top:21px;padding-top:18px}
+ .organization__profile{grid-template-columns:1fr;gap:16px}
+ .organization__identity{gap:8px 18px}
+ .organization__about .organization__identity h3{font-size:clamp(30px,6.8vw,39px)}
+ .organization__phone-large{font-size:clamp(26px,6vw,33px)}
+ .organization__leader .video-link{border-left:0;border-top:1px solid #dce6d9;padding:15px 0 0;margin-top:0}
+}
+@media(max-width:630px){
+ .organization__stats .organization__stat-offices{border-top:0;padding:16px 20px}
+ .organization__stat-offices dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+ .organization__stats .organization__stat-offices{padding:15px 18px}
+ .organization__stat-offices dd{font-size:11.5px}
+ .organization__member-actions{display:grid;grid-template-columns:1fr;gap:9px}
+ .organization__member-actions>a{max-width:none;width:100%}
+}
