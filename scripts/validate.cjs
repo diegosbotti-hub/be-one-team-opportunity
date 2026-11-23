@@ -5,6 +5,7 @@ const base = path.join(__dirname, '..', 'site');
 const load = p => fs.readFileSync(path.join(base,p),'utf8');
 const index = load('index.html');
 const luca = load('luca.html');
+const lucaFolder = load('luca/index.html');
 const members = load('members.js');
 const app = load('app.js');
 assert(index.includes('id="leaderProfile"'), 'La homepage deve mostrare il profilo di Diegos');
@@ -16,9 +17,13 @@ assert(!luca.includes('17 anni di esperienza'), 'La biografia di Diegos non deve
 assert(!luca.includes('fyN9wLT_xPg'), 'Il video di Diegos non deve apparire in /luca');
 assert(members.includes("slug: 'luca'"), 'Slug Luca mancante');
 assert(app.includes('memberByPath'), 'La selezione per percorso non e presente');
-for (const f of ['index.html', 'luca.html']) {
+assert(app.includes("path === 'be-one-team-opportunity'"), 'Homepage GitHub Pages non riconosciuta');
+assert(lucaFolder.includes('Luca Cirlini'), 'Pagina /luca/ assente');
+assert(!lucaFolder.includes('17 anni di esperienza'), 'Biografia Diegos presente in /luca/');
+assert(!lucaFolder.includes('fyN9wLT_xPg'), 'Video Diegos presente in /luca/');
+for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
   const html = load(f);
   const refs = [...html.matchAll(/(?:src|href)="(assets\/[^"?#]+|(?:styles|app|members)\.(?:css|js))"/g)].map(x=>x[1]);
-  for(const ref of refs) assert(fs.existsSync(path.join(base,ref)), `File mancante: ${f} -> ${ref}`);
+  for(const ref of refs) assert(fs.existsSync(path.resolve(base, path.dirname(f), ref)), `File mancante: ${f} -> ${ref}`);
 }
 console.log('OK: Homepage Diegos, /luca, contatti, assets, sicurezza percorsi.');
