@@ -103,3 +103,35 @@
 .organization__member-call{background:#e3f0e5;color:#134e36;border:1px solid #d6e7d9}
 .organization__member-number{font-size:16px!important;font-weight:750;color:#214e38!important;letter-spacing:.02em;margin-top:15px!important}
 @media(max-width:480px){.organization__member-actions{display:grid;grid-template-columns:1fr}.organization__member-actions>a{width:100%}}
+
+
+/* V5.5 — layout più compatto: meno aree vuote, maggiore continuità tra sezioni */
+.section{padding-top:62px;padding-bottom:62px}
+.organization.section{padding-top:54px;padding-bottom:34px}
+.organization__intro p{margin-top:12px;line-height:1.55}
+.organization__stats{margin-top:23px;margin-bottom:23px}
+.organization__stats>div{padding:20px 24px}
+.organization__bottom{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:38px;padding-top:19px;align-items:start}
+.organization__about h3{font-size:clamp(29px,2.7vw,35px);line-height:1.1}
+.organization__member-role{margin-top:5px!important}
+.organization__member-intro{margin-top:10px!important;line-height:1.48!important}
+.organization__member-actions{margin-top:15px;gap:9px}
+.organization__member-actions>a{padding:11px 15px}
+.organization__member-number{margin-top:9px!important}
+.organization__locations dl{gap:15px 19px}
+.organization__locations dt{margin-bottom:4px}
+@media(max-width:760px){
+ .section{padding-top:47px;padding-bottom:47px}
+ .organization.section{padding-top:40px;padding-bottom:28px}
+ .organization__stats{margin-top:17px;margin-bottom:20px}
+ .organization__bottom{grid-template-columns:1fr;gap:25px;padding-top:16px}
+ .organization__member-actions{margin-top:13px}
+ .organization__locations dl{gap:14px 16px}
+}
+@media(max-width:480px){
+ .section{padding-top:40px;padding-bottom:40px}
+ .organization.section{padding-top:35px;padding-bottom:25px}
+ .organization__stats>div{padding:14px}
+ .organization__bottom{gap:22px}
+ .organization__member-actions>a{padding:13px 15px}
+}
