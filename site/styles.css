@@ -298,3 +298,6 @@
 .organization.section{padding-top:28px}
 @media(max-width:760px){.scale.section{padding-bottom:24px}.organization.section{padding-top:24px}}
 @media(max-width:480px){.scale.section{padding-bottom:18px}.organization.section{padding-top:20px}}
+
+/* V5.11 — corregge freccia decorativa mobile: Safari/iOS rende il glifo come enorme emoji che copre il testo */
+@media(max-width:760px){.limit__mark{display:none!important}}
