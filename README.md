@@ -1,44 +1,37 @@
 # BE ONE TEAM Opportunity
 
-Web app commerciale del team: **stesso sistema di pubblicazione di Supporto 3.0 (GitHub Pages)**, con repository completamente separato.
+Piattaforma web del team. La pagina madre è quella personale di Diegos; i membri hanno varianti personalizzate. I contenuti e lo stile condivisi vanno mantenuti coerenti, senza sovrascrivere nome e contatti dei membri.
 
-## Indirizzi ufficiali
+## Sito ufficiale — Cloudflare Pages
 
-- Diegos: https://diegosbotti-hub.github.io/be-one-team-opportunity/
-- Luca Cirlini: https://diegosbotti-hub.github.io/be-one-team-opportunity/luca/
-- Moira Laudato: https://diegosbotti-hub.github.io/be-one-team-opportunity/moira/
-- Dott.ssa Sara Dacci: https://diegosbotti-hub.github.io/be-one-team-opportunity/sara/
+- Diegos (pagina madre): https://be-one-team-opportunity.pages.dev/
+- Luca Cirlini: https://be-one-team-opportunity.pages.dev/luca/
+- Sara Dacci: https://be-one-team-opportunity.pages.dev/sara/
+- Moira Laudato: https://be-one-team-opportunity.pages.dev/moira/
+- Renato Bellicini: https://be-one-team-opportunity.pages.dev/renato/
+- Francesco Favaretto: https://be-one-team-opportunity.pages.dev/francesco/
 
-Ogni membro ha una pagina personale, ma la landing e il materiale sono gestiti centralmente nel medesimo sito.
+**Non utilizzare il vecchio indirizzo GitHub Pages**: la sua pubblicazione è stata disattivata e il workflow `.github/workflows/publish.yml` non va riattivato. Conservare il repository, che contiene il codice e lo storico, senza confonderlo con il servizio di hosting.
 
-## Gestione
+## Struttura dei file
 
-- `site/index.html`: homepage Diegos (biografia e video solo per lui)
-- `site/luca/index.html`: pagina Luca (nome e contatti Luca, senza video e biografia di Diegos)
-- `site/moira/index.html`: pagina Moira (nome e contatti personali)
-- `site/sara/index.html`: pagina Sara Dacci (nome e contatti Sara, senza video e biografia di Diegos)
-- `site/members.js`: elenco referenti, numeri e ruoli
-- `site/app.js`: gestione degli indirizzi e dei collegamenti WhatsApp/telefono
-- `site/assets/`: materiali grafici
-- `scripts/validate.cjs`: verifiche prima della pubblicazione
-- `.github/workflows/publish.yml`: distribuzione **GitHub Pages** automatica a ogni push sul branch `main`
+- `site/index.html`: pagina madre Diegos (biografia e video personali, non trasferibili alle varianti).
+- `site/<slug>/index.html`: variante di ciascun membro, con nome e contatti personalizzati.
+- `site/luca.html`: compatibilità con vecchio percorso Luca.
+- `site/members.js`: elenco dei referenti autorizzati; dati e recapiti.
+- `site/app.js`: impostazione dinamica del referente dalle varianti URL.
+- `site/styles.css`: stile comune, versione V5.12.
+- `site/assets/`: immagini e altri materiali.
+- `scripts/validate.cjs`: controlli statici di coerenza di tutte le pagine.
 
-## Aggiornamenti
+## Procedura di aggiornamento
 
-Ogni modifica al ramo `main` esegue prima i controlli automatici, poi aggiorna lo stesso sito GitHub Pages. Non servono token Cloudflare o caricamenti ZIP.
+Verificare la versione più recente del ramo `main`, apportare modifiche mirate e aggiornare la pagina madre e le varianti interessate. Per un nuovo membro, registrare il nome, il numero e uno slug univoco in `members.js`, poi creare `site/<slug>/index.html` a partire da un'altra variante, non dalla homepage Diegos.
 
-Per un nuovo membro, aggiungere i dati confermati in `members.js` e creare una cartella `site/<slug>/index.html` con i riferimenti relativi corretti. Verificare sempre identità, recapito, WhatsApp, testi visibili e la risoluzione degli asset.
-
-## Ultimi controlli layout
-
-- CSS 5.11: spazi verticali tra le sezioni compattati e freccia decorativa della prima scheda nascosta su smartphone (fino a 760 px), per non coprire il testo.
+Verificare i recapiti nei pulsanti WhatsApp e chiamata, il funzionamento della pagina e la disponibilità della versione pubblicata su Cloudflare dopo ogni commit. Non dichiarare conclusa la pubblicazione senza controllo dell'URL reale.
 
 ## Backup
 
 https://drive.google.com/drive/folders/1mz0pE7tSjG0xMiJJRVw_Km50gf2CaWMn
 
-## Legacy
-
-Il vecchio indirizzo `beoneteamopportunity.pages.dev` era ospitato su Cloudflare. Da ora la pubblicazione e manutenzione operativa avvengono **solo** su GitHub Pages. Non condividere il vecchio link come aggiornato.
-
-**Il repository `supporto-3-0` non deve essere modificato da questo progetto.**
+Il repository `supporto-3-0` è indipendente e non va modificato nell'ambito di questo progetto.
