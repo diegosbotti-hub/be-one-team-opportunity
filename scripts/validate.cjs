@@ -22,7 +22,9 @@ assert(lucaFolder.includes('Luca Cirlini'), 'Pagina /luca/ assente');
 assert(lucaFolder.includes('wa.me/393494762908'), 'WhatsApp /luca/ errato');
 assert(lucaFolder.includes('tel:+393494762908'), 'Telefono /luca/ errato');
 assert(lucaFolder.includes('src="../app.js"'), 'Percorso JS di /luca/ errato');
-assert(lucaFolder.includes('href="../styles.css"'), 'Percorso CSS di /luca/ errato');
+assert(lucaFolder.includes('href="../styles.css?v=5.6"'), 'Percorso CSS di /luca/ errato');
+assert(index.includes('organization__feature'), 'Griglia sezione 06 mancante nella homepage');
+assert(lucaFolder.includes('organization__feature'), 'Griglia sezione 06 mancante nella pagina Luca');
 assert(!lucaFolder.includes('17 anni di esperienza'), 'Biografia Diegos presente in /luca/');
 assert(!lucaFolder.includes('fyN9wLT_xPg'), 'Video Diegos presente in /luca/');
 for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
