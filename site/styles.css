@@ -301,3 +301,55 @@
 
 /* V5.11 — corregge freccia decorativa mobile: Safari/iOS rende il glifo come enorme emoji che copre il testo */
 @media(max-width:760px){.limit__mark{display:none!important}}
+
+
+/* V5.12 — ritmo verticale coerente tra i blocchi, homepage e varianti team.
+   Solo spaziature: contenuti e personalizzazioni non vengono modificati. */
+.section{padding-top:44px;padding-bottom:44px}
+.section__heading{margin-bottom:24px}
+.tools>.wrap>.section__heading{margin-bottom:22px}
+.section__num,.team-overline{margin-bottom:10px}
+.hero__grid{min-height:570px;padding:42px 0}
+.hero__visual{min-height:435px}
+.statement{padding:36px 0}
+.pivot{padding:42px 0}
+.contact{padding:64px 0}
+.tools.section{padding-bottom:12px}
+.tool{margin-bottom:14px}
+.support-pair{margin-top:16px}
+#nutrizione-esterna.outer-wellness.section{padding-top:10px!important;padding-bottom:36px!important}
+.evidence__bottom{margin-top:24px}
+.scale.section{padding-bottom:22px}
+.organization.section{padding-top:22px;padding-bottom:34px}
+.organization__bottom{margin-top:22px;padding-top:18px}
+@media(min-width:761px){
+ .tool{min-height:360px}
+ .tool__visual{min-height:360px}
+ .tool__copy{padding-top:35px;padding-bottom:35px}
+}
+@media(max-width:760px){
+ .section{padding-top:34px;padding-bottom:34px}
+ .section__heading{margin-bottom:21px}
+ .tools>.wrap>.section__heading{margin-bottom:19px}
+ .hero__grid{min-height:0;padding:36px 0 27px}
+ .hero__visual{min-height:280px}
+ .statement{padding:30px 0}
+ .pivot{padding:32px 0}
+ .contact{padding:49px 0}
+ .tools.section{padding-bottom:11px}
+ #nutrizione-esterna.outer-wellness.section{padding-top:9px!important;padding-bottom:30px!important}
+ .scale.section{padding-bottom:19px}
+ .organization.section{padding-top:19px;padding-bottom:27px}
+ .organization__bottom{margin-top:19px;padding-top:16px}
+}
+@media(max-width:480px){
+ .section{padding-top:29px;padding-bottom:29px}
+ .section__heading{margin-bottom:18px}
+ .hero__grid{padding:30px 0 24px}
+ .statement{padding:27px 0}
+ .pivot{padding:29px 0}
+ .contact{padding:43px 0}
+ #nutrizione-esterna.outer-wellness.section{padding-top:8px!important;padding-bottom:26px!important}
+ .scale.section{padding-bottom:16px}
+ .organization.section{padding-top:17px;padding-bottom:24px}
+}
