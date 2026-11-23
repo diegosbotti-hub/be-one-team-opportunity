@@ -23,7 +23,7 @@ assert(!lucaFolder.includes('17 anni di esperienza'), 'Biografia Diegos presente
 assert(!lucaFolder.includes('fyN9wLT_xPg'), 'Video Diegos presente in /luca/');
 for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
   const html = load(f);
-  const refs = [...html.matchAll(/(?:src|href)="(assets\/[^"?#]+|(?:styles|app|members)\.(?:css|js))"/g)].map(x=>x[1]);
+  const refs = [...html.matchAll(/(?:src|href)="((?:\.\.\/)?assets\/[^"?#]+|(?:\.\.\/)?(?:styles|app|members)\.(?:css|js))"/g)].map(x=>x[1]);
   for(const ref of refs) assert(fs.existsSync(path.resolve(base, path.dirname(f), ref)), `File mancante: ${f} -> ${ref}`);
 }
 console.log('OK: Homepage Diegos, /luca, contatti, assets, sicurezza percorsi.');
