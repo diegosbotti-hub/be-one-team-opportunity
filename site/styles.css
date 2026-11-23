@@ -258,3 +258,33 @@
  .organization__member-actions{display:grid;grid-template-columns:1fr;gap:9px}
  .organization__member-actions>a{max-width:none;width:100%}
 }
+
+/* V5.8 — box business Nutrizione Esterna sulla sola homepage */
+.outer-wellness{background:#f7faf7;padding-top:20px!important;padding-bottom:64px!important}
+.outer-wellness__panel{display:grid;grid-template-columns:minmax(0,1.09fr) minmax(0,.91fr);overflow:hidden;border-radius:19px;background:#0e392d;color:#fff;box-shadow:0 24px 62px rgba(12,56,38,.12);min-height:470px}
+.outer-wellness__content{padding:clamp(30px,4.1vw,58px);align-self:center;min-width:0}
+.outer-wellness__eyebrow{display:block;font-size:11px;font-weight:840;letter-spacing:.17em;color:#bce884;margin-bottom:19px;line-height:1.5}
+.outer-wellness__eyebrow span{opacity:.65;margin:0 6px}
+.outer-wellness__content h2{font-size:clamp(29px,3.1vw,43px);line-height:1.13;letter-spacing:-.047em;color:#fff;max-width:540px}
+.outer-wellness__content h2 em{color:#a7e37a;font-style:normal}
+.outer-wellness__content>p{max-width:540px;font-size:14px;line-height:1.66;color:#d4e5dc;margin-top:15px}
+.outer-wellness__content>p strong{color:white;font-weight:780}
+.outer-wellness__content .outer-wellness__lead{font-size:16px;line-height:1.55;color:#f2f8f3;margin-top:21px}
+.outer-wellness__proof{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #427361;margin-top:24px;padding-top:22px;gap:18px}
+.outer-wellness__proof>div{display:flex;align-items:center;gap:11px}
+.outer-wellness__proof strong{font-size:clamp(34px,3.2vw,46px);font-weight:850;letter-spacing:-.06em;color:#c0ea8a;line-height:1}
+.outer-wellness__proof span:not(.outer-wellness__plus){font-size:11px;line-height:1.45;color:#d7e7de;font-weight:650}
+.outer-wellness__proof .outer-wellness__plus{font-size:.62em;color:#c0ea8a}
+.outer-wellness__source{display:inline-flex;align-items:center;gap:7px;font-size:11px;line-height:1.5;font-weight:730;color:#c9ecaa;text-decoration:none;border-bottom:1px solid rgba(201,236,170,.6);padding-bottom:2px;margin-top:22px}
+.outer-wellness__source:hover{color:#fff;border-color:#fff}
+.outer-wellness__visual{position:relative;min-height:430px;background:#090e0c;isolation:isolate;overflow:hidden}
+.outer-wellness__visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center center}
+.outer-wellness__visual:after{content:'';position:absolute;inset:45% 0 0;z-index:0;background:linear-gradient(0deg,rgba(5,24,18,.80),transparent 65%);pointer-events:none}
+.outer-wellness__visual-tag,.outer-wellness__visual-bottom{position:absolute;z-index:1;left:25px;right:25px;color:#fff}
+.outer-wellness__visual-tag{top:23px;font-size:10px;font-weight:830;letter-spacing:.19em}
+.outer-wellness__visual-tag span{color:#b4e781}
+.outer-wellness__visual-bottom{bottom:25px;font-size:12px;line-height:1.45;letter-spacing:.11em}
+.outer-wellness__visual-bottom strong{font-size:17px;letter-spacing:.05em;color:#bfe98d}
+@media(max-width:860px){.outer-wellness__panel{grid-template-columns:1fr 0.85fr}.outer-wellness__content{padding:28px}.outer-wellness__content h2{font-size:32px}.outer-wellness__proof{gap:10px}.outer-wellness__proof>div{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.outer-wellness{padding:12px 0 47px!important}.outer-wellness__panel{grid-template-columns:1fr}.outer-wellness__content{padding:29px 26px 30px}.outer-wellness__content h2{font-size:clamp(29px,6.7vw,38px)}.outer-wellness__proof>div{flex-direction:row}.outer-wellness__visual{min-height:330px;height:330px}.outer-wellness__visual img{object-position:center 50%}}
+@media(max-width:480px){.outer-wellness__panel{border-radius:13px}.outer-wellness__content{padding:27px 22px}.outer-wellness__eyebrow{font-size:9px}.outer-wellness__content h2{font-size:clamp(27px,7.4vw,34px)}.outer-wellness__content .outer-wellness__lead{font-size:15px}.outer-wellness__content>p{font-size:13px}.outer-wellness__proof strong{font-size:35px}.outer-wellness__proof>div{align-items:flex-start;flex-direction:column;gap:3px}.outer-wellness__visual{height:300px;min-height:300px}}
