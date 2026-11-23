@@ -288,3 +288,7 @@
 @media(max-width:860px){.outer-wellness__panel{grid-template-columns:1fr 0.85fr}.outer-wellness__content{padding:28px}.outer-wellness__content h2{font-size:32px}.outer-wellness__proof{gap:10px}.outer-wellness__proof>div{align-items:flex-start;flex-direction:column}}
 @media(max-width:760px){.outer-wellness{padding:12px 0 47px!important}.outer-wellness__panel{grid-template-columns:1fr}.outer-wellness__content{padding:29px 26px 30px}.outer-wellness__content h2{font-size:clamp(29px,6.7vw,38px)}.outer-wellness__proof>div{flex-direction:row}.outer-wellness__visual{min-height:330px;height:330px}.outer-wellness__visual img{object-position:center 50%}}
 @media(max-width:480px){.outer-wellness__panel{border-radius:13px}.outer-wellness__content{padding:27px 22px}.outer-wellness__eyebrow{font-size:9px}.outer-wellness__content h2{font-size:clamp(27px,7.4vw,34px)}.outer-wellness__content .outer-wellness__lead{font-size:15px}.outer-wellness__content>p{font-size:13px}.outer-wellness__proof strong{font-size:35px}.outer-wellness__proof>div{align-items:flex-start;flex-direction:column;gap:3px}.outer-wellness__visual{height:300px;min-height:300px}}
+
+/* V5.9 — spazio ridotto tra SUPPORTO e SKINCARE, desktop e mobile */
+.tools.section{padding-bottom:12px}
+@media(max-width:760px){.tools.section{padding-bottom:12px}}
