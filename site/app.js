@@ -48,6 +48,8 @@
     $('teamMemberName').textContent = member.name;
     $('teamMemberRole').textContent = member.role;
     $('teamMemberNumber').textContent = member.display;
+    $('teamMemberNumber').href = telephoneHref;
+    $('teamMemberNumber').setAttribute('aria-label', `Chiama ${member.name} al ${member.display}`);
     $('teamMemberWhatsapp').href = whatsappHref;
     $('teamMemberPhone').href = telephoneHref;
   }
