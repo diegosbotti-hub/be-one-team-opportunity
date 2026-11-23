@@ -11,6 +11,34 @@
 <title>Be One Team Opportunity | Wellness Industry</title>
 <link rel="icon" href="../assets/be-one-team.jpg" />
 <link rel="stylesheet" href="../styles.css?v=5.7" />
+<style id="skincare-compact-layout">
+/* Sezione skincare a due colonne su ogni dispositivo */
+#nutrizione-esterna.outer-wellness{padding:17px 0 41px!important}
+#nutrizione-esterna .outer-wellness__panel{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);min-height:0;align-items:stretch;border-radius:15px}
+#nutrizione-esterna .outer-wellness__content{padding:clamp(23px,3vw,38px);min-width:0;align-self:center}
+#nutrizione-esterna .outer-wellness__eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:11px;line-height:1.3}
+#nutrizione-esterna .outer-wellness__content h2{font-size:clamp(27px,3.5vw,44px);line-height:1.08}
+#nutrizione-esterna .outer-wellness__content .outer-wellness__lead{font-size:clamp(13px,1.5vw,16px);line-height:1.5;margin-top:14px;color:#e4f1e7}
+#nutrizione-esterna .outer-wellness__visual{position:relative;height:auto;min-height:255px;background:#0e392d;align-self:stretch}
+#nutrizione-esterna .outer-wellness__visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#0e392d}
+#nutrizione-esterna .outer-wellness__visual::after{display:none}
+@media(max-width:760px){
+ #nutrizione-esterna.outer-wellness{padding:12px 0 35px!important}
+ #nutrizione-esterna .outer-wellness__panel{grid-template-columns:minmax(0,1.21fr) minmax(0,.79fr);min-height:0}
+ #nutrizione-esterna .outer-wellness__content{padding:20px 5px 20px 20px}
+ #nutrizione-esterna .outer-wellness__eyebrow{font-size:8px;letter-spacing:.06em;line-height:1.4;margin-bottom:10px}
+ #nutrizione-esterna .outer-wellness__content h2{font-size:clamp(20px,5.6vw,30px);line-height:1.12;overflow-wrap:break-word}
+ #nutrizione-esterna .outer-wellness__content .outer-wellness__lead{font-size:12px;line-height:1.4;margin-top:12px}
+ #nutrizione-esterna .outer-wellness__visual{height:auto;min-height:210px}
+}
+@media(max-width:380px){
+ #nutrizione-esterna .outer-wellness__panel{grid-template-columns:minmax(0,1.24fr) minmax(0,.76fr)}
+ #nutrizione-esterna .outer-wellness__content{padding:17px 3px 17px 15px}
+ #nutrizione-esterna .outer-wellness__content h2{font-size:20px}
+ #nutrizione-esterna .outer-wellness__content .outer-wellness__lead{font-size:11.5px;line-height:1.38}
+ #nutrizione-esterna .outer-wellness__visual{min-height:190px}
+}
+</style>
 <script src="../members.js" defer></script>
 <script src="../app.js" defer></script>
 </head>
@@ -118,6 +146,19 @@
     </div>
     <div class="support-pair"><div class="support-item"><div class="support-item__visual market-visual" aria-hidden="true"><div class="browser-bar"><i></i><i></i><i></i><span>MARKETING / CLIENTI</span></div><div class="market-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="market-ribbon">ACQUISIZIONE → RELAZIONE → CONTINUITÀ</div></div><span class="tool__tag">05 / MARKETING</span><h3>IL MERCATO NON SI ASPETTA. SI COSTRUISCE.</h3><p>Acquisizione, comunicazione e relazioni: strumenti per espandere il mercato anche oltre il territorio.</p></div><div class="support-item"><div class="support-item__visual training-visual" aria-hidden="true"><div class="training-top">SUPPORTO 3.0 <span>● &nbsp; ● &nbsp; ●</span></div><div class="training-line big"></div><div class="training-line"></div><div class="training-cells"><span></span><span></span><span></span></div><div class="training-bottom">METODO &nbsp;•&nbsp; FORMAZIONE &nbsp;•&nbsp; DUPLICABILITÀ</div></div><span class="tool__tag">06 / FORMAZIONE</span><h3>SE IL METODO NON SI TRASFERISCE, NON CRESCE.</h3><p>Formazione, procedure e affiancamento trasformano la competenza individuale in un processo replicabile.</p></div></div>
   </div></section>
+
+  <section class="outer-wellness section" id="nutrizione-esterna" aria-labelledby="outer-wellness-title"><div class="wrap">
+  <div class="outer-wellness__panel">
+    <div class="outer-wellness__content">
+      <span class="outer-wellness__eyebrow">NUTRIZIONE ESTERNA · NUOVA AREA DI BUSINESS</span>
+      <h2 id="outer-wellness-title">SKINCARE<br><em>MADE IN KOREA.</em></h2>
+      <p class="outer-wellness__lead">Accanto alla nutrizione interna, sviluppiamo anche il mercato della <strong>cura della pelle</strong>: nuovi clienti e nuove opportunità di business.</p>
+    </div>
+    <div class="outer-wellness__visual">
+      <img src="data:image/webp;base64,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"  alt="Prodotti per la cura della pelle della linea skincare Made in Korea" loading="lazy" width="800" height="800" />
+    </div>
+  </div>
+</div></section>
 
   <section class="evidence section" id="credibilita" aria-labelledby="evidence-title"><div class="wrap">
     <div class="section__heading section__heading--light"><span class="section__num">04 / SEGNALI CONCRETI</span><h2 id="evidence-title">LA CREDIBILITÀ NON SI DICHIARA.<br><em>SI DOCUMENTA.</em></h2></div>
