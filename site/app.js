@@ -5,9 +5,11 @@
   const members = window.BE_ONE_MEMBERS || {};
   // Le pagine /luca e /luca.html vengono gestite dal medesimo sito.
   // Un percorso personale prevale sempre su ?ref= per evitare di contattare il referente sbagliato.
-  const path = window.location.pathname.replace(/\/+$/, '').split('/').pop().replace(/\.html$/i, '').toLowerCase();
+  const segments = window.location.pathname.replace(/\/+$/, '').split('/').filter(Boolean);
+  const path = (segments[segments.length - 1] || '').replace(/\.html$/i, '').toLowerCase();
   const memberByPath = Object.keys(members).find(key => members[key].slug === path);
-  const isHome = path === '' || path === 'index';
+  // La home GitHub Pages e' /be-one-team-opportunity/, mentre su Cloudflare era /.
+  const isHome = path === '' || path === 'index' || (segments.length === 1 && path === 'be-one-team-opportunity');
   const ref = memberByPath || (isHome ? (params.get('ref') || 'diegos').trim().toLowerCase() : null);
   const member = ref && Object.prototype.hasOwnProperty.call(members, ref) ? members[ref] : null;
   // La biografia e il video personali di Diegos restano SOLO nella sua homepage.
