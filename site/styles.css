@@ -292,3 +292,9 @@
 /* V5.9 — spazio ridotto tra SUPPORTO e SKINCARE, desktop e mobile */
 .tools.section{padding-bottom:12px}
 @media(max-width:760px){.tools.section{padding-bottom:12px}}
+
+/* V5.10 — ritmo verticale compatto tra SALTO IMPRENDITORIALE e BE ONE TEAM */
+.scale.section{padding-bottom:26px}
+.organization.section{padding-top:28px}
+@media(max-width:760px){.scale.section{padding-bottom:24px}.organization.section{padding-top:24px}}
+@media(max-width:480px){.scale.section{padding-bottom:18px}.organization.section{padding-top:20px}}
