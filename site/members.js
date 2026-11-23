@@ -12,5 +12,12 @@ window.BE_ONE_MEMBERS = Object.freeze({
     role: 'Be One Team · Collaboratore',
     phone: '+393494762908',
     display: '349 476 2908'
+  }),
+  'sara-dacci': Object.freeze({
+    name: 'Dott.ssa Sara Dacci',
+    slug: 'sara',
+    role: 'Be One Team',
+    phone: '+393283720702',
+    display: '328 372 0702'
   })
 });
