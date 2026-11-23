@@ -22,9 +22,23 @@ assert(lucaFolder.includes('Luca Cirlini'), 'Pagina /luca/ assente');
 assert(lucaFolder.includes('wa.me/393494762908'), 'WhatsApp /luca/ errato');
 assert(lucaFolder.includes('tel:+393494762908'), 'Telefono /luca/ errato');
 assert(lucaFolder.includes('src="../app.js"'), 'Percorso JS di /luca/ errato');
-assert(lucaFolder.includes('href="../styles.css?v=5.6"'), 'Percorso CSS di /luca/ errato');
+assert(lucaFolder.includes('href="../styles.css?v=5.7"'), 'Percorso CSS di /luca/ errato');
 assert(index.includes('organization__feature'), 'Griglia sezione 06 mancante nella homepage');
 assert(lucaFolder.includes('organization__feature'), 'Griglia sezione 06 mancante nella pagina Luca');
+for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
+  const html = load(f);
+  assert(html.includes('organization__stat-offices'), 'Riquadro uffici mancante: ' + f);
+  for (const address of ['Via Gramsci 5', 'Via Fratelli Manfredi 6', "Via Massimo D'Azeglio 9/B", 'Piazza del Mercato 11']) {
+    assert(html.includes(address), 'Indirizzo ufficio mancante: ' + f + ' -> ' + address);
+  }
+  assert(!html.includes('I CENTRI DI RIFERIMENTO'), 'Vecchio blocco uffici duplicato: ' + f);
+  assert(!html.includes('IL TUO REFERENTE BE ONE TEAM'), 'Etichetta referente da rimuovere: ' + f);
+  assert(html.includes('organization__phone-large'), 'Numero grande accanto al nome mancante: ' + f);
+  assert(html.includes('v=5.7'), 'Stile aggiornato non collegato: ' + f);
+}
+assert(lucaFolder.includes('id="teamMemberNumber" href="tel:+393494762908"'), 'Telefono Luca grande non collegato correttamente');
+assert(index.includes('href="tel:+393476262757"'), 'Telefono Diegos mancante accanto al nome');
+
 assert(!lucaFolder.includes('17 anni di esperienza'), 'Biografia Diegos presente in /luca/');
 assert(!lucaFolder.includes('fyN9wLT_xPg'), 'Video Diegos presente in /luca/');
 for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
