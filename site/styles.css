@@ -135,3 +135,27 @@
  .organization__bottom{gap:22px}
  .organization__member-actions>a{padding:13px 15px}
 }
+
+/* BE ONE TEAM · Sezione 06: messaggio condiviso e impaginazione compatta */
+.organization.section{padding-top:38px;padding-bottom:28px}
+.organization__intro{display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);gap:clamp(24px,4vw,55px);align-items:start;max-width:none}
+.organization__headline h2{font-size:clamp(30px,3vw,43px);line-height:1.13;max-width:590px}
+.organization__copy p{font-size:14px;line-height:1.5;color:#4f6557;margin-top:10px;max-width:100%}
+.organization__copy p:first-child{margin-top:0}
+.organization__copy p strong{color:#1c5337;font-weight:800}
+.organization__stats{margin-top:18px;margin-bottom:18px}
+.organization__stats>div{padding:17px 22px}
+.organization__bottom{padding-top:16px;gap:30px}
+@media(max-width:760px){
+  .organization.section{padding-top:31px;padding-bottom:26px}
+  .organization__intro{grid-template-columns:1fr;gap:16px}
+  .organization__headline h2{font-size:clamp(29px,6.6vw,39px);max-width:680px}
+  .organization__copy p{font-size:14px;line-height:1.52}
+  .organization__stats{margin-top:16px;margin-bottom:17px}
+  .organization__bottom{gap:24px}
+}
+@media(max-width:480px){
+  .organization.section{padding-top:28px;padding-bottom:24px}
+  .organization__headline h2{font-size:clamp(28px,7.5vw,34px)}
+  .organization__stats>div{padding:13px}
+}
