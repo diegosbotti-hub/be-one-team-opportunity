@@ -1,0 +1,54 @@
+name: Backup BE ONE TEAM - snapshot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/backup-snapshot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    name: Crea archivio completo aggiornato
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del progetto
+        uses: actions/checkout@v4
+      - name: Genera manifest con URL ufficiali e commit
+        shell: bash
+        run: |
+          {
+            echo "BE ONE TEAM OPPORTUNITY - BACKUP 23/11/2026"
+            echo "Repository: https://github.com/diegosbotti-hub/be-one-team-opportunity"
+            echo "Commit: $(git rev-parse HEAD)"
+            echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
+            echo "Creato UTC: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo ""
+            echo "URL UFFICIALI - CLOUDFLARE PAGES"
+            echo "Diegos (pagina madre): https://be-one-team-opportunity.pages.dev/"
+            echo "Luca Cirlini: https://be-one-team-opportunity.pages.dev/luca/"
+            echo "Sara Dacci: https://be-one-team-opportunity.pages.dev/sara/"
+            echo "Moira Laudato: https://be-one-team-opportunity.pages.dev/moira/"
+            echo "Renato Bellicini: https://be-one-team-opportunity.pages.dev/renato/"
+            echo "Francesco Favaretto: https://be-one-team-opportunity.pages.dev/francesco/"
+            echo ""
+            echo "Vecchio hosting GitHub Pages: disattivato e da non riattivare."
+            echo "Questo archivio conserva file sorgente, asset e script della web app; i contenuti personali delle varianti sono nel codice."
+            echo "Regola retention Google Drive: conservare il backup piu recente e il precedente; eliminare il piu vecchio solo dopo il nuovo backup verificato."
+          } > BACKUP_MANIFEST_2026-11-23.txt
+      - name: Salva lo snapshot come artefatto ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: BE_ONE_TEAM_BACKUP_2026-11-23
+          path: |
+            site/
+            scripts/
+            README.md
+            .github/workflows/backup-snapshot.yml
+            BACKUP_MANIFEST_2026-11-23.txt
+          include-hidden-files: true
+          retention-days: 30
+          if-no-files-found: error
