@@ -47,6 +47,17 @@
 @media(max-width:480px){.tool__deep-link{width:100%;padding:14px 15px;gap:3px 10px}.tool__deep-link-main{font-size:11px}.tool__deep-link-sub{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.tool__deep-link{transition:none}.tool__deep-link:hover{transform:none}}
 </style>
+<style id="homepage-pro2col-duo">
+/* Solo pagina madre: due immagini originali inserite al posto del vecchio visual Pro2col. */
+.tool--pro .pro-visual--duo{display:grid;grid-template-columns:1.08fr .92fr;gap:10px;align-items:stretch;justify-content:initial;padding:18px;background:linear-gradient(135deg,#123e32,#0a3028);min-height:400px;height:100%}
+.pro-visual--duo figure{margin:0;min-width:0;overflow:hidden;border-radius:14px;background:#173f32;display:flex;align-items:center;justify-content:center}
+.pro-visual--duo .pro-duo__diagram{padding:7px;background:#285e48}
+.pro-visual--duo .pro-duo__diagram img{display:block;width:100%;height:auto;max-width:none;max-height:100%;aspect-ratio:1/1;object-fit:contain;border-radius:0;box-shadow:none}
+.pro-visual--duo .pro-duo__app{background:#f0f4f0}
+.pro-visual--duo .pro-duo__app img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;border-radius:0;box-shadow:none}
+@media(max-width:760px){.tool--pro .pro-visual--duo{grid-template-columns:1fr 1fr;height:auto;min-height:300px;padding:10px;gap:8px}.pro-visual--duo figure{min-height:270px}.pro-visual--duo .pro-duo__diagram{padding:4px}.pro-visual--duo .pro-duo__app img{min-height:270px}}
+@media(max-width:480px){.tool--pro .pro-visual--duo{grid-template-columns:1fr;gap:10px;padding:12px;min-height:0}.pro-visual--duo figure{min-height:0}.pro-visual--duo .pro-duo__diagram{padding:8px}.pro-visual--duo .pro-duo__diagram img{width:100%;max-height:none}.pro-visual--duo .pro-duo__app{height:340px}.pro-visual--duo .pro-duo__app img{height:100%;min-height:0;object-position:center 42%}}
+</style>
 <script src="members.js" defer></script>
 <script src="app.js" defer></script>
 </head>
@@ -141,7 +152,10 @@
       <div class="tool__visual hgo-visual"><img src="assets/hgo-dashboard-nuovo.webp" alt="Illustrazione della dashboard HGO con valutazione della composizione corporea e monitoraggio dell’evoluzione nel tempo" loading="lazy" width="1448" height="1086" /></div>
     </div>
     <div class="tool tool--pro">
-      <div class="tool__visual pro-visual"><img src="assets/pro2col-screen.webp" alt="Anteprima visiva dell'ecosistema digitale Pro2col" loading="lazy" width="660" height="781" /><span class="pro-visual__label">DATA-DRIVEN<br>PERSONALIZATION</span></div>
+      <div class="tool__visual pro-visual pro-visual--duo" aria-label="Ecosistema Pro2col e applicazione digitale">
+        <figure class="pro-duo__diagram"><img src="assets/pro2col-ecosistema-originale.png" alt="Infografica Pro2col Personal Health O/S: schema circolare di dati, servizi, nutrizione e monitoraggio del benessere" loading="lazy" width="1016" height="1000" /></figure>
+        <figure class="pro-duo__app"><img src="assets/pro2col-app-persona-originale.png" alt="Persona che mostra sul telefono l'app Pro2col con il monitoraggio quotidiano" loading="lazy" width="488" height="642" /></figure>
+      </div>
       <div class="tool__copy"><span class="tool__tag">02 / INTELLIGENZA ARTIFICIALE</span><img class="tool__logo pro-logo" src="assets/pro2col-logo.png" alt="Logo originale Pro2col" loading="lazy" width="363" height="76" /><h4>IL CLIENTE NON CERCA COMPLESSITÀ. CERCA UNA DIREZIONE.</h4><p>Tecnologia e dati organizzano un percorso personalizzato. Un riferimento continuativo, anche oltre la singola consulenza.</p><span class="tool__keywords">AI · PERSONALIZZAZIONE · ECOSISTEMA</span><a class="tool__deep-link" href="https://www.linkedin.com/pulse/il-25-marzo-2026-herbalife-ha-speso-150-milioni-di-dollari-botti-oo5df/" target="_blank" rel="noopener noreferrer" aria-label="Leggi il mio articolo di approfondimento su Pro2col su LinkedIn"><span class="tool__deep-link-main">LEGGI IL MIO ARTICOLO SU PRO2COL</span><span class="tool__deep-link-sub">Approfondimento su LinkedIn</span><span class="tool__deep-link-arrow" aria-hidden="true">↗</span></a></div>
     </div>
     <div class="tool tool--bioniq">
