@@ -11,6 +11,7 @@ Piattaforma web del team. La pagina madre è quella personale di Diegos; i membr
 - Renato Bellicini: https://be-one-team-opportunity.pages.dev/renato/
 - Francesco Favaretto: https://be-one-team-opportunity.pages.dev/francesco/
 - Mariela Quartararo: https://be-one-team-opportunity.pages.dev/mariela/
+- Candidati Wellness Coach (dopo la telefonata): https://be-one-team-opportunity.pages.dev/candidati/
 
 **Non utilizzare il vecchio indirizzo GitHub Pages**: la sua pubblicazione è stata disattivata e il workflow `.github/workflows/publish.yml` non va riattivato. Conservare il repository, che contiene il codice e lo storico, senza confonderlo con il servizio di hosting.
 
@@ -19,6 +20,7 @@ Piattaforma web del team. La pagina madre è quella personale di Diegos; i membr
 - `site/index.html`: pagina madre Diegos (biografia e video personali, non trasferibili alle varianti).
 - `site/<slug>/index.html`: variante di ciascun membro, con nome e contatti personalizzati.
 - `site/luca.html`: compatibilità con vecchio percorso Luca.
+- `site/candidati/index.html` e `site/candidati/candidati.css`: landing autonoma per candidati già sentiti telefonicamente. CTA WhatsApp verso Diegos. La HOM viene inviata separatamente su WhatsApp dopo il link della pagina, non è incorporata nella landing.
 - `site/members.js`: elenco dei referenti autorizzati; dati e recapiti.
 - `site/app.js`: impostazione dinamica del referente dalle varianti URL.
 - `site/styles.css`: stile comune, versione V5.12.

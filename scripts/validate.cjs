@@ -82,4 +82,28 @@ for (const [slug, name, digits, shown, html] of [
   assert(!html.includes('Luca Cirlini'), 'Dati Luca nel nuovo profilo ' + slug);
   assert(!html.includes('fyN9wLT_xPg'), 'Video Diegos nel nuovo profilo ' + slug);
 }
-console.log('OK: homepage Diegos e varianti Luca, Sara, Moira, Renato, Francesco, Mariela.');
+
+const candidati = load('candidati/index.html');
+const candidatiCss = load('candidati/candidati.css');
+assert(candidati.includes('<title>Wellness Coach | Il tuo percorso con Be One Team</title>'), 'Titolo candidati mancante');
+assert(candidati.includes('ABBIAMO PARLATO.'), 'Candidati: welcome mancante');
+assert(candidati.includes('Herbalife'), 'Candidati: trasparenza brand mancante');
+assert(candidati.includes('non prevede stipendio fisso'), 'Candidati: trasparenza lavoro mancante');
+assert(candidati.includes('59,92 €'), 'Candidati: disclosure costo mancante');
+assert(candidati.includes('Non si riceve alcun compenso per il semplice reclutamento'), 'Candidati: disclosure remunerazione mancante');
+assert(candidati.includes('pd-statement-typical-distributor-earnings-it-it.pdf'), 'Candidati: documentazione guadagni non presente');
+assert(candidati.includes('href="https://wa.me/393476262757?text='), 'Candidati: WhatsApp numero errato');
+assert((candidati.match(/class="wc-final__cta"/g)||[]).length === 1, 'Candidati: una sola CTA');
+assert(!candidati.includes('<iframe') && !candidati.includes('id="hom"'), 'Candidati: HOM non deve essere nella landing, invio separato');
+assert(!candidati.includes('≈ 880.000') && !candidati.includes('700.000'), 'Candidati: fatturato non verificato');
+assert(candidati.includes('<meta name="robots" content="noindex,follow"'), 'Candidati: noindex mancante');
+assert(!candidati.includes('UN FLUSSO. SEI FASI.'), 'Candidati: fasi incongruenti');
+assert(candidatiCss.includes('@media(max-width:760px)'), 'Candidati: layout mobile mancante');
+const wcFlow = candidati.match(/<ol class="wc-flow"[^>]*>([\s\S]*?)<\/ol>/);
+assert(wcFlow && (wcFlow[1].match(/<li>/g)||[]).length === 5, 'Candidati: cinque fasi non corrispondono');
+for (const ref of ['../assets/be-one-team.jpg', '../assets/hgo-dashboard-nuovo.webp', '../styles.css?v=5.12', './candidati.css?v=1.0']) {
+ const filePath = ref.split('?')[0];
+ assert(fs.existsSync(path.resolve(base, 'candidati', filePath)), 'Candidati: asset non trovato ' + ref);
+}
+console.log('OK: homepage Diegos, varianti team e nuova landing /candidati/ verificati.');
+

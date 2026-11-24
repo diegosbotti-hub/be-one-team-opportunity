@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout del progetto
         uses: actions/checkout@v4
+      - name: Controlla struttura sito e landing candidati
+        run: node scripts/validate.cjs
       - name: Genera manifest con URL ufficiali e commit
         shell: bash
         run: |
@@ -35,21 +37,22 @@ jobs:
             echo "Renato Bellicini: https://be-one-team-opportunity.pages.dev/renato/"
             echo "Francesco Favaretto: https://be-one-team-opportunity.pages.dev/francesco/"
             echo "Mariela Quartararo: https://be-one-team-opportunity.pages.dev/mariela/"
+            echo "Candidati Wellness Coach (landing autonoma): https://be-one-team-opportunity.pages.dev/candidati/"
             echo ""
             echo "Vecchio hosting GitHub Pages: disattivato e da non riattivare."
             echo "Questo archivio conserva file sorgente, asset e script della web app; i contenuti personali delle varianti sono nel codice."
             echo "Regola retention Google Drive: conservare il backup piu recente e il precedente; eliminare il piu vecchio solo dopo il nuovo backup verificato."
-          } > BACKUP_MANIFEST_2026-11-24.txt
+          } > BACKUP_MANIFEST_2026-11-24_CANDIDATI.txt
       - name: Salva lo snapshot come artefatto ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: BE_ONE_TEAM_BACKUP_2026-11-24
+          name: BE_ONE_TEAM_BACKUP_2026-11-24_CANDIDATI
           path: |
             site/
             scripts/
             README.md
             .github/workflows/backup-snapshot.yml
-            BACKUP_MANIFEST_2026-11-24.txt
+            BACKUP_MANIFEST_2026-11-24_CANDIDATI.txt
           include-hidden-files: true
           retention-days: 30
           if-no-files-found: error
