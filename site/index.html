@@ -36,6 +36,17 @@
  #nutrizione-esterna .outer-wellness__visual{height:240px;min-height:240px}
 }
 </style>
+<style id="homepage-deep-links">
+/* Approfondimenti evidenziati solo nella homepage. */
+.tool__deep-link{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 18px;align-items:center;width:fit-content;max-width:100%;margin-top:17px;padding:15px 19px;border-radius:12px;background:#0d6240;color:#fff!important;text-decoration:none!important;box-shadow:0 7px 18px rgba(7,80,49,.15);transition:background-color .2s ease,transform .2s ease}
+.tool__deep-link-main{grid-column:1;display:block;font-size:12px;font-weight:850;letter-spacing:.06em;line-height:1.4;color:#fff!important}
+.tool__deep-link-sub{grid-column:1;display:block;font-size:11px;font-weight:650;line-height:1.45;color:#dcf5e2!important}
+.tool__deep-link-arrow{grid-column:2;grid-row:1/3;font-size:24px;font-weight:600;color:#b7ec81!important}
+.tool__deep-link:hover{background:#084e33;transform:translateY(-1px)}
+.tool__deep-link:focus-visible{outline:3px solid #8bcf36;outline-offset:4px}
+@media(max-width:480px){.tool__deep-link{width:100%;padding:14px 15px;gap:3px 10px}.tool__deep-link-main{font-size:11px}.tool__deep-link-sub{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.tool__deep-link{transition:none}.tool__deep-link:hover{transform:none}}
+</style>
 <script src="members.js" defer></script>
 <script src="app.js" defer></script>
 </head>
@@ -131,10 +142,10 @@
     </div>
     <div class="tool tool--pro">
       <div class="tool__visual pro-visual"><img src="assets/pro2col-screen.webp" alt="Anteprima visiva dell'ecosistema digitale Pro2col" loading="lazy" width="660" height="781" /><span class="pro-visual__label">DATA-DRIVEN<br>PERSONALIZATION</span></div>
-      <div class="tool__copy"><span class="tool__tag">02 / INTELLIGENZA ARTIFICIALE</span><img class="tool__logo pro-logo" src="assets/pro2col-logo.png" alt="Logo originale Pro2col" loading="lazy" width="363" height="76" /><h4>IL CLIENTE NON CERCA COMPLESSITÀ. CERCA UNA DIREZIONE.</h4><p>Tecnologia e dati organizzano un percorso personalizzato. Un riferimento continuativo, anche oltre la singola consulenza.</p><span class="tool__keywords">AI · PERSONALIZZAZIONE · ECOSISTEMA</span><a href="https://it.linkedin.com/in/diegosbotti" target="_blank" rel="noopener noreferrer" aria-label="Trova l'articolo Pro2col tra gli articoli del profilo LinkedIn di Diegos Botti" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:#146b43;font-size:12px;font-weight:800;line-height:1.5;text-decoration:underline;text-underline-offset:4px">Il mio approfondimento Pro2col su LinkedIn <span aria-hidden="true">↗</span></a></div>
+      <div class="tool__copy"><span class="tool__tag">02 / INTELLIGENZA ARTIFICIALE</span><img class="tool__logo pro-logo" src="assets/pro2col-logo.png" alt="Logo originale Pro2col" loading="lazy" width="363" height="76" /><h4>IL CLIENTE NON CERCA COMPLESSITÀ. CERCA UNA DIREZIONE.</h4><p>Tecnologia e dati organizzano un percorso personalizzato. Un riferimento continuativo, anche oltre la singola consulenza.</p><span class="tool__keywords">AI · PERSONALIZZAZIONE · ECOSISTEMA</span><a class="tool__deep-link" href="https://www.linkedin.com/pulse/il-25-marzo-2026-herbalife-ha-speso-150-milioni-di-dollari-botti-oo5df/" target="_blank" rel="noopener noreferrer" aria-label="Leggi il mio articolo di approfondimento su Pro2col su LinkedIn"><span class="tool__deep-link-main">LEGGI IL MIO ARTICOLO SU PRO2COL</span><span class="tool__deep-link-sub">Approfondimento su LinkedIn</span><span class="tool__deep-link-arrow" aria-hidden="true">↗</span></a></div>
     </div>
     <div class="tool tool--bioniq">
-      <div class="tool__copy"><span class="tool__tag">03 / INTEGRAZIONE PERSONALIZZATA</span><img class="tool__logo bioniq-logo" src="assets/bioniq-logo.png" alt="Logo originale Bioniq GO" loading="lazy" width="348" height="62" /><h4>LA DIFFERENZA NON È PROPORRE DI PIÙ. È PROPORRE MEGLIO.</h4><p>Dati individuali, abitudini e obiettivi guidano la selezione della formula Bioniq GO. Un approccio che distingue la proposta.</p><span class="tool__keywords">VALUTAZIONE · FORMULE SELEZIONATE · ROUTINE</span><a href="https://www.bioniq.com/" target="_blank" rel="noopener noreferrer" aria-label="Approfondisci Bioniq sul sito ufficiale, in inglese" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:#146b43;font-size:12px;font-weight:800;line-height:1.5;text-decoration:underline;text-underline-offset:4px">Scopri Bioniq sul sito ufficiale <span aria-hidden="true">↗</span></a></div>
+      <div class="tool__copy"><span class="tool__tag">03 / INTEGRAZIONE PERSONALIZZATA</span><img class="tool__logo bioniq-logo" src="assets/bioniq-logo.png" alt="Logo originale Bioniq GO" loading="lazy" width="348" height="62" /><h4>LA DIFFERENZA NON È PROPORRE DI PIÙ. È PROPORRE MEGLIO.</h4><p>Dati individuali, abitudini e obiettivi guidano la selezione della formula Bioniq GO. Un approccio che distingue la proposta.</p><span class="tool__keywords">VALUTAZIONE · FORMULE SELEZIONATE · ROUTINE</span><a class="tool__deep-link" href="https://www.bioniq.com/" target="_blank" rel="noopener noreferrer" aria-label="Scopri Bioniq sul sito ufficiale in inglese"><span class="tool__deep-link-main">SCOPRI LA TECNOLOGIA BIONIQ</span><span class="tool__deep-link-sub">Approfondimento sul sito ufficiale (in inglese)</span><span class="tool__deep-link-arrow" aria-hidden="true">↗</span></a></div>
       <div class="tool__visual bio-visual"><img src="assets/bioniq-product.webp" alt="Confezione originale Bioniq con formulazione in granuli" loading="lazy" width="650" height="665" /></div>
     </div>
     <div class="tool tool--foodplan">
