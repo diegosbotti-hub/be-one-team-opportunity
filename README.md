@@ -10,6 +10,7 @@ Piattaforma web del team. La pagina madre è quella personale di Diegos; i membr
 - Moira Laudato: https://be-one-team-opportunity.pages.dev/moira/
 - Renato Bellicini: https://be-one-team-opportunity.pages.dev/renato/
 - Francesco Favaretto: https://be-one-team-opportunity.pages.dev/francesco/
+- Mariela Quartararo: https://be-one-team-opportunity.pages.dev/mariela/
 
 **Non utilizzare il vecchio indirizzo GitHub Pages**: la sua pubblicazione è stata disattivata e il workflow `.github/workflows/publish.yml` non va riattivato. Conservare il repository, che contiene il codice e lo storico, senza confonderlo con il servizio di hosting.
 

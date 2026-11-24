@@ -40,5 +40,12 @@ window.BE_ONE_MEMBERS = Object.freeze({
     role: 'Be One Team',
     phone: '+393478665605',
     display: '347 866 5605'
+  }),
+  'mariela-quartararo': Object.freeze({
+    name: 'Mariela Quartararo',
+    slug: 'mariela',
+    role: 'Be One Team',
+    phone: '+393403617981',
+    display: '340 361 7981'
   })
 });

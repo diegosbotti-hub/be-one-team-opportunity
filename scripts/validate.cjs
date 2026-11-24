@@ -9,6 +9,7 @@ const lucaFolder = load('luca/index.html');
 const saraFolder = load('sara/index.html');
 const renatoFolder = load('renato/index.html');
 const francescoFolder = load('francesco/index.html');
+const marielaFolder = load('mariela/index.html');
 const members = load('members.js');
 const app = load('app.js');
 const cssVersion = index.match(/href="styles\.css\?v=([0-9.]+)"/)?.[1];
@@ -30,7 +31,7 @@ assert(lucaFolder.includes('src="../app.js"'), 'Percorso JS di /luca/ errato');
 assert(lucaFolder.includes(`href="../styles.css?v=${cssVersion}"`), 'Percorso CSS di /luca/ errato');
 assert(index.includes('organization__feature'), 'Griglia sezione 06 mancante nella homepage');
 assert(lucaFolder.includes('organization__feature'), 'Griglia sezione 06 mancante nella pagina Luca');
-for (const f of ['index.html', 'luca.html', 'luca/index.html', 'sara/index.html', 'renato/index.html', 'francesco/index.html']) {
+for (const f of ['index.html', 'luca.html', 'luca/index.html', 'sara/index.html', 'renato/index.html', 'francesco/index.html', 'mariela/index.html']) {
   const html = load(f);
   assert(html.includes('organization__stat-offices'), 'Riquadro uffici mancante: ' + f);
   for (const address of ['Via Gramsci 5', 'Via Fratelli Manfredi 6', "Via Massimo D'Azeglio 9/B", 'Piazza del Mercato 11']) {
@@ -66,7 +67,8 @@ for (const f of ['index.html', 'luca.html', 'luca/index.html']) {
 }
 for (const [slug, name, digits, shown, html] of [
   ['renato', 'Renato Bellicini', '393427408005', '342 740 8005', renatoFolder],
-  ['francesco', 'Francesco Favaretto', '393478665605', '347 866 5605', francescoFolder]
+  ['francesco', 'Francesco Favaretto', '393478665605', '347 866 5605', francescoFolder],
+  ['mariela', 'Mariela Quartararo', '393403617981', '340 361 7981', marielaFolder]
 ]) {
   assert(members.includes(`slug: '${slug}'`), 'Slug assente ' + slug);
   assert(members.includes(`name: '${name}'`), 'Nome assente ' + name);
@@ -80,4 +82,4 @@ for (const [slug, name, digits, shown, html] of [
   assert(!html.includes('Luca Cirlini'), 'Dati Luca nel nuovo profilo ' + slug);
   assert(!html.includes('fyN9wLT_xPg'), 'Video Diegos nel nuovo profilo ' + slug);
 }
-console.log('OK: homepage Diegos e varianti Luca, Sara, Moira, Renato, Francesco.');
+console.log('OK: homepage Diegos e varianti Luca, Sara, Moira, Renato, Francesco, Mariela.');
