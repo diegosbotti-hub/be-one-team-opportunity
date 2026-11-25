@@ -56,7 +56,50 @@
 .pro-visual--duo .pro-duo__app img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;border-radius:0;box-shadow:none}
 @media(max-width:760px){.tool--pro .pro-visual--duo{grid-template-columns:1fr 1fr;height:auto;min-height:300px;padding:10px;gap:8px}.pro-visual--duo figure{min-height:270px}.pro-visual--duo .pro-duo__diagram{padding:4px}.pro-visual--duo .pro-duo__app img{min-height:270px}}
 @media(max-width:480px){.tool--pro .pro-visual--duo{grid-template-columns:1fr;gap:10px;padding:12px;min-height:0}.pro-visual--duo figure{min-height:0}.pro-visual--duo .pro-duo__diagram{padding:8px}.pro-visual--duo .pro-duo__diagram img{width:100%;max-height:none}.pro-visual--duo .pro-duo__app{height:340px}.pro-visual--duo .pro-duo__app img{height:100%;min-height:0;object-position:center 42%}}
-</style><script src="../members.js" defer></script>
+</style><style id="homepage-evidence-story">
+/* Presentazione investimento Ronaldo + ricerca Bocconi. Solo pagine personalizzate dei membri. */
+.evidence-story{display:grid;gap:16px}
+.evidence-story__investments{padding:25px;background:linear-gradient(135deg,#1b563e,#123b2d);border:1px solid #608a70;border-radius:17px;overflow:hidden}
+.evidence-story__lead{margin-bottom:19px}
+.evidence-story__lead .proof__label{margin-bottom:9px;display:block}
+.evidence-story__lead h3{font-size:clamp(26px,3vw,37px);letter-spacing:-.045em;line-height:1.13;max-width:850px;margin:0;color:#fff}
+.evidence-story__lead>p{font-size:14px;color:#d8e9dc;line-height:1.6;margin-top:10px}
+.evidence-story__pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.evidence-story__project{min-width:0;overflow:hidden;border-radius:12px;background:#10392c;border:1px solid #42725a;display:flex;flex-direction:column}
+.evidence-story__photo{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:#173b31}
+.evidence-story__photo img{display:block;position:absolute;top:-7.08%;height:auto;width:214.69%;max-width:none;border-radius:0}
+.evidence-story__photo--pro2col img{left:-2.66%}
+.evidence-story__photo--bioniq img{left:-104.85%}
+.evidence-story__project-copy{display:flex;flex-direction:column;align-items:stretch;flex:1;padding:18px 21px 21px}
+.evidence-story__project-top{display:flex;align-items:baseline;justify-content:space-between;gap:9px}
+.evidence-story__project-top strong{font-size:20px;color:#fff;letter-spacing:.02em}
+.evidence-story__project-top>span{font-size:11px;font-weight:850;color:#c9e9ab;white-space:nowrap}
+.evidence-story__project-copy p{font-size:13px;line-height:1.6;color:#dbece0;margin:8px 0 19px;flex:1}
+.evidence-story__project-copy p strong{color:#fff}
+.evidence-story a.evidence-story__button{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#b9e889;color:#133d2a!important;padding:13px 15px;border-radius:9px;border:1px solid #dbf6c4;text-decoration:none;font-size:12px;font-weight:850;letter-spacing:.035em;line-height:1.4}
+.evidence-story a.evidence-story__button:hover{background:#d2f4ad}
+.evidence-story a.evidence-story__button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.evidence-story__button>span:last-child{font-size:22px;line-height:1}
+.evidence-story__research{padding:29px 32px;background:linear-gradient(130deg,#245c43,#143b2d);border:1px solid #7da991;border-radius:17px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);gap:32px;align-items:center}
+.evidence-story__research-copy .proof__label{display:block;margin-bottom:10px}
+.evidence-story__academic{font-size:10px;letter-spacing:.085em;line-height:1.45;font-weight:850;color:#183a29;background:#c7ebae;border-radius:6px;padding:8px 11px;display:inline-block;margin-bottom:14px}
+.evidence-story__research h3{font-size:clamp(25px,2.7vw,34px);line-height:1.12;letter-spacing:-.045em;color:#fff;margin:0}
+.evidence-story__research-copy>p{font-size:13px;line-height:1.68;margin-top:14px;color:#deeee0;max-width:740px}
+.evidence-story__research-copy>p strong{color:#fff}
+.evidence-story__research-copy p.evidence-story__values{font-size:clamp(14px,1.45vw,17px);font-weight:770;color:#c9ec9b;line-height:1.6;margin-top:17px}
+.evidence-story__values span{margin:0 5px;color:#9fb98d}
+.evidence-story__research-link{min-width:0;display:flex;flex-direction:column;gap:13px}
+.evidence-story__publisher{display:flex;flex-direction:column;gap:7px}
+.evidence-story__publisher>span{color:#c9e4cb;font-weight:780;font-size:10px;letter-spacing:.12em}
+.evidence-story__publisher-logo{width:222px;max-width:100%;height:66px;background:#fff;border-radius:9px;position:relative;overflow:hidden;border:4px solid #fff}
+.evidence-story__publisher-logo img{position:absolute;display:block;width:242px;max-width:none;height:auto;left:-31px;top:-31px}
+.evidence-story__publisher small{font-size:11px;color:#cee2d5;line-height:1.4}
+.evidence-story .evidence-story__button--research{width:100%;margin-top:3px}
+.evidence-story+.evidence__bottom{margin-top:23px}
+@media(max-width:780px){.evidence-story__research{grid-template-columns:1fr;gap:23px;padding:26px}.evidence-story__research-link{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:12px}.evidence-story__pair{gap:11px}.evidence-story__investments{padding:19px}.evidence-story__project-copy{padding:15px}.evidence-story__project-top{flex-wrap:wrap}.evidence-story__project-top strong{font-size:18px}}
+@media(max-width:560px){.evidence-story__pair{grid-template-columns:1fr;gap:13px}.evidence-story__investments{padding:17px}.evidence-story__lead h3{font-size:27px}.evidence-story__photo{aspect-ratio:4/3}.evidence-story__project-copy{padding:15px 16px 18px}.evidence-story__research{padding:22px 18px;gap:22px}.evidence-story__research h3{font-size:27px}.evidence-story__research-link{display:flex;gap:12px}.evidence-story__research-copy p.evidence-story__values{font-size:15px}.evidence-story__values span{margin:0 3px}}
+</style>
+<script src="../members.js" defer></script>
 <script src="../app.js" defer></script>
 </head>
 <body>
@@ -182,10 +225,56 @@
 
   <section class="evidence section" id="credibilita" aria-labelledby="evidence-title"><div class="wrap">
     <div class="section__heading section__heading--light"><span class="section__num">04 / SEGNALI CONCRETI</span><h2 id="evidence-title">LA CREDIBILITÀ NON SI DICHIARA.<br><em>SI DOCUMENTA.</em></h2></div>
-    <div class="evidence__grid">
-      <article class="proof proof--big"><span class="proof__label">INVESTIMENTO TECNOLOGICO</span><div class="proof__amount">7,5 <span>milioni $</span></div><h3>CRISTIANO RONALDO<br>INVESTE IN PRO2COL.</h3><p>Partecipazione del <strong>10%</strong> nella società che detiene la tecnologia Pro2col.</p><a href="https://ir.herbalife.com/news-events/press-releases/detail/935/herbalife-announces-cristiano-ronaldo-invests-7-5-million" rel="noopener noreferrer" target="_blank">Comunicato ufficiale ↗</a></article>
-      <article class="proof"><span class="proof__label">PERSONALIZZAZIONE</span><h3>RONALDO INVESTE ANCHE IN BIONIQ.</h3><p>Un secondo investimento nel settore della micronutrizione personalizzata.</p><a href="https://insider.fitt.co/press-release/cristiano-ronaldo-invests-in-bioniq-bringing-its-total-valuation-to-82-million/" rel="noopener noreferrer" target="_blank">Approfondisci ↗</a></article>
-      <article class="proof"><span class="proof__label">RICERCA / ORGANIZZAZIONE</span><h3>UNA RICERCA CON IL CONTRIBUTO DI DOCENTI BOCCONI.</h3><p>Lo studio di Target Research ha analizzato sostenibilità sociale e dinamiche di collaborazione del modello organizzativo.</p><a href="https://emplus.egeaonline.it/en/61/archivio-rivista/rivista/3462054/articolo/3462121" rel="noopener noreferrer" target="_blank">Leggi la pubblicazione ↗</a></article>
+
+    <div class="evidence-story">
+      <article class="evidence-story__investments" aria-labelledby="ronaldo-investments-title">
+        <div class="evidence-story__lead">
+          <span class="proof__label">INNOVAZIONE E INVESTIMENTI</span>
+          <h3 id="ronaldo-investments-title">CRISTIANO RONALDO INVESTE NEL FUTURO DEL BENESSERE.</h3>
+          <p>Due investimenti in realtà che sviluppano tecnologie e soluzioni per il benessere personalizzato.</p>
+        </div>
+        <div class="evidence-story__pair">
+          <div class="evidence-story__project">
+            <div class="evidence-story__photo evidence-story__photo--pro2col" role="img" aria-label="Cristiano Ronaldo con maglia Herbalife davanti al logo Pro2col">
+              <img src="../assets/ronaldo-investimenti-foto.png" width="1374" height="926" loading="lazy" alt="" />
+            </div>
+            <div class="evidence-story__project-copy">
+              <div class="evidence-story__project-top"><strong>PRO2COL</strong><span>7,5 MILIONI $</span></div>
+              <p>Investimento per una partecipazione del <strong>10%</strong> nella società che detiene la tecnologia Pro2col.</p>
+              <a class="evidence-story__button" href="https://nutraceuticalbusinessreview.com/cristiano-ronaldo-invests-7-5m-in-herbalife-pro2col-10-stake" target="_blank" rel="noopener noreferrer"><span>COMUNICATO UFFICIALE</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="evidence-story__project">
+            <div class="evidence-story__photo evidence-story__photo--bioniq" role="img" aria-label="Cristiano Ronaldo con un rappresentante Bioniq che mostrano la maglia Ronaldo numero 7">
+              <img src="../assets/ronaldo-investimenti-foto.png" width="1374" height="926" loading="lazy" alt="" />
+            </div>
+            <div class="evidence-story__project-copy">
+              <div class="evidence-story__project-top"><strong>BIONIQ</strong><span>PERSONALIZZAZIONE</span></div>
+              <p>Investimento in un'azienda specializzata in integrazione e micronutrizione personalizzata.</p>
+              
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="evidence-story__research" aria-labelledby="research-model-title">
+        <div class="evidence-story__research-copy">
+          <span class="proof__label">RICERCA / MODELLO DI BUSINESS</span>
+          <span class="evidence-story__academic">STUDIO COORDINATO DA STUDIOSI LEGATI ALL'UNIVERSITÀ BOCCONI</span>
+          <h3 id="research-model-title">UN MODELLO DI BUSINESS CHE VALORIZZA LE PERSONE.</h3>
+          <p>La ricerca di <strong>Target Research</strong>, coordinata da Carolina Guerini e Luca Molteni, studiosi legati a Bocconi e SDA Bocconi, ha analizzato il modello di collaborazione Herbalife attraverso le esperienze di <strong>1.653 distributrici</strong>.</p>
+          <p class="evidence-story__values">Meritocrazia <span>·</span> Flessibilità <span>·</span> Forza del team <span>·</span> Collaborazione</p>
+        </div>
+        <div class="evidence-story__research-link">
+          <div class="evidence-story__publisher">
+            <span>ARTICOLO PUBBLICATO SU</span>
+            <div class="evidence-story__publisher-logo" role="img" aria-label="Logo Economy Magazine">
+              <img src="../assets/economy-logo-fonte.png" width="782" height="410" loading="lazy" alt="" />
+            </div>
+            <small>Economy Magazine · 16 novembre 2023</small>
+          </div>
+          <a class="evidence-story__button evidence-story__button--research" href="https://www.economymagazine.it/collaborazione-sostantivo-femminile/" target="_blank" rel="noopener noreferrer"><span>LEGGI L'ARTICOLO SU ECONOMY</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </div>
     <p class="evidence__bottom">RICERCA SUL MODELLO ORGANIZZATIVO <span>·</span> INVESTIMENTI TECNOLOGICI <span>·</span> PERSONALIZZAZIONE</p>
   </div></section>
